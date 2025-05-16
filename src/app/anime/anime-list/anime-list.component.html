@@ -2,7 +2,7 @@
   <div class="container contenedor-animes">
   <div class="row">
     <!-- COMPLETAR CON EL LLAMADO A UNA FUNCIÓN PROPIA QUE CALCULE EL RATING PROMEDIO -->
-    <p>El rating promedio es <span class="badge text-bg-primary rounded-pill"> {{ ratingPromedio }} </span></p>
+    <p>El rating promedio es <span class="badge text-bg-primary rounded-pill"> {{ calcularRatingPromedio() }} </span></p>
     <div *ngIf="selected">
       <app-anime-detail [animeDetail]="selectedBAnime"></app-anime-detail>
       <hr>
@@ -14,7 +14,7 @@
         <div class="card-body">
           <p class="card-text">⭐{{ anime.Rating }}</p>
           <p class="card-text"><b>Categories: </b>{{ anime.categorie }}</p>
-          <p class="card-text"><b># seasons: </b> {{ numTemps }}</p>
+          <p class="card-text"><b># seasons: </b> {{ anime.seasons.length }}</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
