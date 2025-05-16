@@ -33,12 +33,10 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-2" *ngFor="let season of animeDetail.seasons">
+    <div class="row" *ngFor="let season of animeDetail.seasons">
         <ul class="list-group">
           <li class="list-group-item"> {{ season.name }} <span class="badge text-bg-primary rounded-pill">{{ season.episodes }}</span></li>
         </ul>
-      </div>
     </div>
     
 
