@@ -4,7 +4,7 @@ export class Anime {
   id: number;
   name: string;
   description: string;
-  Rating: number;
+  Rating: string;
   total_episodes: number;
   categorie: string;
   studio: string;
@@ -15,7 +15,7 @@ export class Anime {
     id: number,
     name: string,
     description: string,
-    Rating: number,
+    Rating: string,
     total_episodes: number,
     categorie: string,
     studio: string,

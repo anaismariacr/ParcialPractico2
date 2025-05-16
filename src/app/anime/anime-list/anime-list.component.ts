@@ -26,7 +26,7 @@ export class AnimeListComponent implements OnInit {
   calcularRatingPromedio() {
     let avg = 0;
     this.animes.forEach(anime => {
-      avg += anime.Rating;
+      avg += parseFloat(anime.Rating);
     });
     return avg / this.animes.length;
   }
@@ -49,7 +49,6 @@ export class AnimeListComponent implements OnInit {
     this.getAnimes();
     this.ratingPromedio = this.calcularRatingPromedio();
     this.numTemps = this.calcularNumTemps();
-
   }
 
 }

@@ -8,29 +8,17 @@
       <hr>
     </div>
     <div class="col-4" *ngFor="let anime of animes">
-        <p>{{anime.name}}</p>
-        <img src={{anime.img}}  alt="anime image" width=50px>
-        <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
-        <!-- COMPLETAR PARA INCLUIR LA CANTIDAD DE TEMPORADAS -->
-        <p class="card-text"><b># seasons: </b>"COMPLETAR"</p>
-        <a href="#" (click)="onSelected(anime)">More information</a>
-        <hr>
-   </div>
-
-  </div>
-</div>
-
-<div class="row">
-  <div *ngFor="let anime of animes">
-    <div class="card" style="width: 18rem;">
-      <h5 class="card-title">{{ anime.name }}</h5>
-      <img src="{{ anime.img }}" class="card-img-top" alt="{{anime.name}}">
-      <div class="card-body">
-        <p class="card-text">{{ anime.Rating }}</p>
-        <p class="card-text">Categories: {{ anime.categorie }}</p>
-        <p class="card-text"># seasons: {{ numTemps }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="card" style="width: 18rem;">
+        <h5 class="card-title">{{ anime.name }}</h5>
+        <img src="{{ anime.img }}" class="card-img-top" alt="{{anime.name}}">
+        <div class="card-body">
+          <p class="card-text">⭐{{ anime.Rating }}</p>
+          <p class="card-text"><b>Categories: </b>{{ anime.categorie }}</p>
+          <p class="card-text"><b># seasons: </b> {{ numTemps }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
       </div>
     </div>
+
   </div>
 </div>
