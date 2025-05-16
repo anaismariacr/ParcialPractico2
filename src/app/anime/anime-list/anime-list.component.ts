@@ -9,6 +9,8 @@ import { AnimeService } from '../anime.service';
 })
 export class AnimeListComponent implements OnInit {
 
+  ratingPromedio: number = 0;
+
   selectedBAnime!: Anime;
   selected = false;
   animes: Array<Anime> = [];
@@ -20,6 +22,14 @@ export class AnimeListComponent implements OnInit {
     });
   }
 
+  calcularRatingPromedio() {
+    let avg = 0;
+    this.animes.forEach(anime => {
+      avg += anime.Rating;
+    });
+    return avg / this.animes.length;
+  }
+
   onSelected(anime: Anime): void {
     this.selected = true;
     this.selectedBAnime = anime;
@@ -27,6 +37,8 @@ export class AnimeListComponent implements OnInit {
 
   ngOnInit() {
     this.getAnimes();
+    this.ratingPromedio = this.calcularRatingPromedio();
+
   }
 
 }

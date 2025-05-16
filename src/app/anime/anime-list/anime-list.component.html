@@ -2,7 +2,7 @@
   <div class="container contenedor-animes">
   <div class="row">
     <!-- COMPLETAR CON EL LLAMADO A UNA FUNCIÓN PROPIA QUE CALCULE EL RATING PROMEDIO -->
-    <p>El rating promedio es <span class="badge text-bg-primary rounded-pill"> 7.99 </span></p>
+    <p>El rating promedio es <span class="badge text-bg-primary rounded-pill"> {{ ratingPromedio }} </span></p>
     <div *ngIf="selected">
       <app-anime-detail [animeDetail]="selectedBAnime"></app-anime-detail>
       <hr>
@@ -17,5 +17,18 @@
         <hr>
    </div>
 
+  </div>
+</div>
+
+<div class="row">
+  <div *ngFor="let anime of animes">
+    <div class="card" style="width: 18rem;">
+      <h5 class="card-title">{{ anime.name }}</h5>
+      <img src="{{ anime.img }}" class="card-img-top" alt="{{anime.name}}">
+      <div class="card-body">
+        <p class="card-text">{{ anime.Rating }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
   </div>
 </div>
